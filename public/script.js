@@ -25,7 +25,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 // --- 1. INDEXEDDB SETUP (SannMusicDB) ---
 let db;
-const request = indexedDB.open("SannMusicDB", 1);
+const request = indexedDB.open("ThaaMusicDB", 1);
 request.onupgradeneeded = function(e) {
     db = e.target.result;
     if(!db.objectStoreNames.contains('playlists')) db.createObjectStore('playlists', { keyPath: 'id' });
